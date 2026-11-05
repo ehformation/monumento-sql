@@ -12,3 +12,8 @@ CREATE TABLE pays (
   id_pays INT PRIMARY KEY,
   nom VARCHAR(50) NOT NULL
 );
+
+CREATE TABLE categorie (
+  id_categorie INT PRIMARY KEY,
+  nom VARCHAR(50) NOT NULL
+);
