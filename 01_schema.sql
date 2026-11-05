@@ -1,6 +1,6 @@
 CREATE TABLE monument (
   id_monument INT PRIMARY KEY,
-  titre VARCHAR(120) NOT NULL
+  titre VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE ville (
