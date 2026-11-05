@@ -1,0 +1,24 @@
+name: Scripts SQL
+on: [push, pull_request]
+
+jobs:
+  scripts:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: monumento
+        ports: ["3306:3306"]
+        options: >-
+          --health-cmd="mysqladmin ping -proot"
+          --health-interval=5s --health-timeout=5s --health-retries=10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Lancer les scripts dans l'ordre
+        run: |
+          for f in 0*.sql; do
+            echo "== $f"
+            mysql -h 127.0.0.1 -uroot -proot monumento < "$f"
+          done
