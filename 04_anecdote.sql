@@ -1,0 +1,3 @@
+-- anecdote étape 1 : création de la table anecdote
+-- anecdote étape 2 : insertion de données dans la table anecdote
+-- anecdote étape 3 : requête pour récupérer toutes les anecdotes
