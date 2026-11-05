@@ -1,0 +1,1 @@
+CREATE INDEX idx_monument_titre ON monument (titre);
